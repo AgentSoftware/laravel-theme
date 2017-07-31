@@ -1,5 +1,5 @@
 {
-    "name": "igaster/laravel-theme",
+    "name": "agentsoftware/laravel-theme",
     "description": "Laravel 5 Themes: Asset & Views folder per theme. Theme inheritance. Blade integration and more...",
     "keywords": ["themes", "views", "assets", "blade", "laravel-5", "package"],
     "license": "MIT",
@@ -11,7 +11,7 @@
         }
     ],	
     "require": {
-        "illuminate/contracts": "5.4.*"
+        "illuminate/contracts": "5.*"
     },
     "require-dev": {
         "orchestra/testbench": "~3.4",
