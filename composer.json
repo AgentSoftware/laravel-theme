@@ -3,7 +3,7 @@
     "description": "Laravel 5 Themes: Asset & Views folder per theme. Theme inheritance. Blade integration and more...",
     "keywords": ["themes", "views", "assets", "blade", "laravel-5", "package"],
     "license": "MIT",
-    "homepage": "https://github.com/Igaster/laravel-theme.git",
+    "homepage": "https://github.com/AgentSoftware/laravel-theme",
     "authors": [
         {
             "name": "Giannis Gasteratos",
