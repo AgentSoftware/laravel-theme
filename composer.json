@@ -22,8 +22,8 @@
     },
     "autoload": {
         "psr-4" : {
-            "Igaster\\LaravelTheme\\"        : "src/",
-            "Igaster\\LaravelTheme\\Tests\\" : "tests/"            
+            "AgentSoftware\\LaravelTheme\\"        : "src/",
+            "AgentSoftware\\LaravelTheme\\Tests\\" : "tests/"            
         }
     },
     "minimum-stability": "stable"
