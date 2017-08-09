@@ -103,7 +103,7 @@ class Theme {
         \File::makeDirectory($viewsPath);
         \File::makeDirectory($assetPath);
 
-        $themeJson = new \Igaster\LaravelTheme\themeManifest(array_merge($this->settings,[
+        $themeJson = new \AgentSoftware\LaravelTheme\themeManifest(array_merge($this->settings,[
             'name'          => $this->name,
             'extends'       => $this->parent ? $this->parent->name : null,
             'asset-path'    => $this->assetPath,

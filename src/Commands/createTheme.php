@@ -60,7 +60,7 @@ class createTheme extends baseCommand
 
         if ($this->confirm('Create Theme?', true)){
 
-            $themeJson = new \Igaster\LaravelTheme\themeManifest(array_merge([
+            $themeJson = new \AgentSoftware\LaravelTheme\themeManifest(array_merge([
                 "name"        => $themeName,
                 "extends"     => $parentTheme,
                 "asset-path"  => $assetPath,

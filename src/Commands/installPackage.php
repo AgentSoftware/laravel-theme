@@ -27,7 +27,7 @@ class installPackage extends baseCommand
         exec("tar xzf $package -C {$this->tempPath}");
 
         // Read theme.json
-        $themeJson = new \Igaster\LaravelTheme\themeManifest();
+        $themeJson = new \AgentSoftware\LaravelTheme\themeManifest();
         $themeJson->loadFromFile("{$this->tempPath}/views/theme.json");
 
         // Check if theme is already installed
