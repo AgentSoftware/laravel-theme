@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace AgentSoftware\LaravelTheme\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem as File;
@@ -15,7 +15,7 @@ class removeTheme extends baseCommand
             $themes = array_map(function($theme){
                 return $theme->name;
             }, \Theme::all());
-            $themeName = $this->choice('Select a theme to create a distributable package:', $themes); 
+            $themeName = $this->choice('Select a theme to create a distributable package:', $themes);
         }
 
         // Remove without confirmation?

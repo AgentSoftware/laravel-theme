@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace AgentSoftware\LaravelTheme\Commands;
 
 use Illuminate\Console\Command;
 
@@ -9,7 +9,7 @@ class listThemes extends baseCommand
     protected $description = 'List installed themes';
 
     public function info($text,$newline = true){
-        $this->output->write("<info>$text</info>", $newline);        
+        $this->output->write("<info>$text</info>", $newline);
     }
 
     public function handle() {

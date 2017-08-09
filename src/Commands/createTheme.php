@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace AgentSoftware\LaravelTheme\Commands;
 
 use Illuminate\Console\Command;
 
@@ -8,7 +8,7 @@ class createTheme extends baseCommand
     protected $description = 'Create a new theme';
 
     public function info($text,$newline = true){
-        $this->output->write("<info>$text</info>", $newline);        
+        $this->output->write("<info>$text</info>", $newline);
     }
 
     public function handle() {
@@ -39,7 +39,7 @@ class createTheme extends baseCommand
             $themes = array_map(function($theme){
                 return $theme->name;
             }, \Theme::all());
-            $parentTheme = $this->choice('Which one', $themes);        
+            $parentTheme = $this->choice('Which one', $themes);
         }
 
         $customConfiguration = $this->askCustomConfiguration();

@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace AgentSoftware\LaravelTheme\Commands;
 
 use Illuminate\Console\Command;
 

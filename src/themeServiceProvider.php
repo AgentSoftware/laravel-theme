@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme;
+<?php namespace AgentSoftware\LaravelTheme;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
@@ -12,7 +12,7 @@ class themeServiceProvider extends ServiceProvider {
 		| Bind in IOC
 		|--------------------------------------------------------------------------*/
 
-		$this->app->singleton('igaster.themes', function(){
+		$this->app->singleton('agentsoftware.themes', function(){
 			return new Themes();
 		});
 
@@ -21,7 +21,7 @@ class themeServiceProvider extends ServiceProvider {
 		|--------------------------------------------------------------------------*/
 
         $this->app->singleton('view.finder', function($app) {
-            return new \Igaster\LaravelTheme\themeViewFinder(
+            return new \AgentSoftware\LaravelTheme\themeViewFinder(
                 $app['files'],
                 $app['config']['view.paths'],
                 null
@@ -38,7 +38,7 @@ class themeServiceProvider extends ServiceProvider {
 		| Initialize Themes
 		|--------------------------------------------------------------------------*/
 
-		$themes = $this->app->make('igaster.themes');
+		$themes = $this->app->make('agentsoftware.themes');
         $themes->scanThemes();
 
 		/*--------------------------------------------------------------------------
@@ -63,12 +63,12 @@ class themeServiceProvider extends ServiceProvider {
 		|--------------------------------------------------------------------------*/
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \Igaster\LaravelTheme\Commands\listThemes::class,
-                \Igaster\LaravelTheme\Commands\createTheme::class,
-                \Igaster\LaravelTheme\Commands\removeTheme::class,
-                \Igaster\LaravelTheme\Commands\createPackage::class,
-                \Igaster\LaravelTheme\Commands\installPackage::class,
-                \Igaster\LaravelTheme\Commands\refreshCache::class,
+                \AgentSoftware\LaravelTheme\Commands\listThemes::class,
+                \AgentSoftware\LaravelTheme\Commands\createTheme::class,
+                \AgentSoftware\LaravelTheme\Commands\removeTheme::class,
+                \AgentSoftware\LaravelTheme\Commands\createPackage::class,
+                \AgentSoftware\LaravelTheme\Commands\installPackage::class,
+                \AgentSoftware\LaravelTheme\Commands\refreshCache::class,
             ]);
         }
 

@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace AgentSoftware\LaravelTheme\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -25,7 +25,7 @@ class baseCommand extends Command
         $this->tempPath = $this->packages_path('tmp');
         $this->files = $files;
     }
-    
+
     protected function createTempFolder(){
         $this->clearTempFolder();
         $this->files->makeDirectory($this->tempPath);

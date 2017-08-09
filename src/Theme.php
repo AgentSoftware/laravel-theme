@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme;
+<?php namespace AgentSoftware\LaravelTheme;
 
 class Theme {
 
@@ -60,7 +60,7 @@ class Theme {
             return $parentTheme->url($url);
         }
         // No parent theme? Lookup in the public folder.
-        else { 
+        else {
             if (file_exists(public_path($url))){
                 return "/".$url;
             }
@@ -133,7 +133,7 @@ class Theme {
 
             if ($t !== $this && $assetExists && $t->assetPath == $this->assetPath)
                 throw new \Exception("Can not delete folder [$viewsPath] of theme [{$this->name}] because it is also used by theme [{$t->name}]", 1);
-                
+
         }
 
         \File::deleteDirectory($viewsPath);
@@ -141,7 +141,7 @@ class Theme {
 
         \Theme::rebuildCache();
     }
-    
+
     /*--------------------------------------------------------------------------
     | Theme Settings
     |--------------------------------------------------------------------------*/

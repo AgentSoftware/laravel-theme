@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme\Commands;
+<?php namespace AgentSoftware\LaravelTheme\Commands;
 
 use Illuminate\Console\Command;
 
@@ -14,7 +14,7 @@ class createPackage extends baseCommand
             $themes = array_map(function($theme){
                 return $theme->name;
             }, \Theme::all());
-            $themeName = $this->choice('Select a theme to create a distributable package:', $themes);        
+            $themeName = $this->choice('Select a theme to create a distributable package:', $themes);
         }
         $theme = \Theme::find($themeName);
 
@@ -29,7 +29,7 @@ class createPackage extends baseCommand
         // Sanitize target filename
         $packageFileName = $theme->name;
         $packageFileName = mb_ereg_replace("([^\w\s\d\-_~,;\[\]\(\).])", '', $packageFileName);
-        $packageFileName = mb_ereg_replace("([\.]{2,})", '', $packageFileName);        
+        $packageFileName = mb_ereg_replace("([\.]{2,})", '', $packageFileName);
         $packageFileName = $this->packages_path("{$packageFileName}.theme.tar.gz");
 
         // Create Temp Folder
@@ -47,7 +47,7 @@ class createPackage extends baseCommand
 
         // Tar Temp Folder contents
         system("cd {$this->tempPath} && tar -cvzf $packageFileName .");
-        
+
         // Del Temp Folder
         $this->clearTempFolder();
 

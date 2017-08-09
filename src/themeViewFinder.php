@@ -1,4 +1,4 @@
-<?php namespace Igaster\LaravelTheme;
+<?php namespace AgentSoftware\LaravelTheme;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\View\FileViewFinder;
@@ -9,7 +9,7 @@ class themeViewFinder extends FileViewFinder {
 
     public function __construct(Filesystem $files, array $paths, array $extensions = null)
     {
-        $this->themeEngine = \App::make('igaster.themes');
+        $this->themeEngine = \App::make('agentsoftware.themes');
         parent::__construct($files, $paths, $extensions);
     }
 
